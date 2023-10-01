@@ -53,9 +53,12 @@ class NetworkCaller {
     } catch (e) {}
     return NetworkResponse(false, -1, null);
   }
-      void goToLogin(){
-    Navigator.pushAndRemoveUntil(TaskManagerApp.globalKey.currentState!.context, MaterialPageRoute(builder: (context)=>LoginScreen() ), (route) => false);
-     AuthUtility.clearUserInfo();
+
+      void goToLogin()async {
+      await  AuthUtility.clearUserInfo();
+     Navigator.pushAndRemoveUntil(TaskManagerApp.globalKey.currentContext!, 
+     MaterialPageRoute(builder: (context)=>LoginScreen() ), (route) => false);
+     
       }
 
 

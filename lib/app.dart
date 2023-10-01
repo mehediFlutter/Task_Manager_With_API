@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_manager_project/ui/screens/splash_screen.dart';
 
 class TaskManagerApp extends StatefulWidget {
+  
  static GlobalKey<ScaffoldState> globalKey = GlobalKey<ScaffoldState>();
    TaskManagerApp({super.key});
 
